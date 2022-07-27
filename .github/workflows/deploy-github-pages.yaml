@@ -22,7 +22,7 @@ jobs:
       - name: Build website
         run: pnpm build
       - name: Deploy to GitHub pages
-        working_directory: ./dist
+        working-directory: ./dist
         run: |
           git init
           git checkout -b main
