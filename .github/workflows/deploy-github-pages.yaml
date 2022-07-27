@@ -1,14 +1,14 @@
 name: Build and deploy site to GitHub pages
-on: 
+on:
   push:
-      branches:
-        - 'main'
-      paths:
-        - '**.tsx'
-        - '**.css'
-        - '**.html'
-        - '**.json'
-        - '**.yaml'
+    branches:
+      - "main"
+    paths:
+      - "**.tsx"
+      - "**.css"
+      - "**.html"
+      - "**.json"
+      - "**.yaml"
 permissions:
   contents: write
 jobs:
@@ -23,6 +23,8 @@ jobs:
           run_install: true
       - name: Build website
         run: pnpm build
+      - name: Add .nojekyll file
+        run: touch dist/.nojekyll
       - name: Deploy to GitHubPages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
