@@ -34,7 +34,7 @@ function JarPrompt(props: {setShouldShowNote: React.Dispatch<React.SetStateActio
 
   return (
     <main>
-      <p>{hi}! {doYouWant} {toVerb} <button onClick={() => props.setShouldShowNote(true)}>{aThing}</button>?</p>
+      <p>{hi}! {doYouWant} {toVerb} <button type='button' onClick={() => props.setShouldShowNote(true)}>{aThing}</button>?</p>
     </main>
   )
 }

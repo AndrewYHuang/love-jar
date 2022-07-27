@@ -2,7 +2,7 @@
 
 :root {
   /* Palette */
-  --background: #f2e3e0;
+  --background: #ffe3e7;
   --highlight: #eed3d8;
   --primary: #b88894;
   --primary-dark: #84626a;
@@ -63,6 +63,7 @@ button {
   color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  cursor: pointer;
 }
 
 button:hover {
