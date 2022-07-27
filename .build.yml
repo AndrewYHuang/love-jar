@@ -5,8 +5,10 @@ packages:
 sources:
   - https://git.sr.ht/~kaytwolf/love-jar
 tasks:
+  - install-pnpm: sudo npm i -g pnpm
   - setup: |
-      sudo npm i -g pnpm
+      cd love-jar
       pnpm i
   - build: |
+      cd love-jar
       pnpm build
