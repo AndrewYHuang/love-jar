@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import * as _ from 'lodash'
+import _ from 'lodash'
 import loveNotes from './love-notes.json'
 
 function LoveNote() {
