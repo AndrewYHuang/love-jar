@@ -32,11 +32,26 @@ body {
 }
 
 header > h1 {
+  margin: 0;
   font-size: 2.5em;
 }
 
 main {
   font-size: 1.2em;
+}
+
+h1 > a {
+  text-underline-offset: 0.15em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+a:hover {
+  color: var(--primary-light);
 }
 
 button {
@@ -46,14 +61,15 @@ button {
   font-size: 1em;
   font-family: var(--cursive);
   color: var(--primary);
-  text-decoration: underline dotted;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 button:hover {
   color: var(--primary-light);
-  text-decoration: underline dotted;
 }
 
 footer {
-  font-size: 0.8em;
+  margin-top: 2em;
+  font-size: 0.7em;
 }

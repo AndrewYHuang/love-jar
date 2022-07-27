@@ -22,20 +22,19 @@ function JarPrompt(props: {setShouldShowNote: React.Dispatch<React.SetStateActio
   ])
 
   const doYouWant = _.sample([
-    "Are you wanting",
     "Do you want",
+    "Want",
+    "Need"
   ])
 
-  const [toRead, aNote] = _.sample([
-    ["", "a bit of love"],
-    ["to read", "a cute message"],
-    ["", "a digital hug"],
-    ["to have a read of", "something nice"],
-  ]) as [string, string]
+  const [toVerb, aThing] = _.sample([
+    [["", "to have", "to get"], ["a digital hug", "a bit of love", "a virtual kiss"]],
+    [["", "to read", "to get"], ["a cute message", "something sweet", "a little love note"]],
+  ])?.map(phrase => _.sample(phrase)) ?? ["", ""]
 
   return (
     <main>
-      <p>{hi}! {doYouWant} {toRead} <button onClick={() => props.setShouldShowNote(true)}>{aNote}</button>?</p>
+      <p>{hi}! {doYouWant} {toVerb} <button onClick={() => props.setShouldShowNote(true)}>{aThing}</button>?</p>
     </main>
   )
 }
@@ -47,14 +46,15 @@ function App() {
   return (
   <>
     <header>
-      <h1>Love Jar</h1>
+      <h1><a href='/'>Love Jar</a></h1>
     </header>
     { shouldShowNote 
       ? <LoveNote />
       : <JarPrompt setShouldShowNote={setShouldShowNote} />
     }
     <footer>
-      <p>Made with &lt;3 by Andy</p>
+      <p>Made with &lt;3 by Andy!</p>
+      <p><a href='https://github.com/AndrewYHuang/love-jar'>Source</a></p>
     </footer>
   </>
   )
