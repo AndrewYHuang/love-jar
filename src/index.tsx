@@ -54,7 +54,7 @@ function App() {
     }
     <footer>
       <p>Made with &lt;3 by Andy!</p>
-      <p><a href='https://github.com/AndrewYHuang/love-jar'>Source</a></p>
+      <p><a href='https://git.sr.ht/~kaytwolf/love-jar/settings/info'>Source</a></p>
     </footer>
   </>
   )

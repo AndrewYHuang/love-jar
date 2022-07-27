@@ -1,0 +1,11 @@
+image: alpine
+packages:
+  - nodejs
+  - pnpm
+sources:
+  - https://git.sr.ht/~kaytwolf/love-jar
+tasks:
+  - setup: |
+    pnpm i
+  - build: |
+    pnpm build
