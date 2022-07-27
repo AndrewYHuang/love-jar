@@ -1,0 +1,31 @@
+name: Build and deploy site to GitHub pages
+on: 
+  push:
+      branches:
+        - 'main'
+      paths:
+        - '**.tsx'
+        - '**.css'
+        - '**.html'
+        - '**.json'
+        - '**.yaml'
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.6.0
+          run_install: true
+      - name: Build website
+        run: pnpm build
+      - name: Deploy to GitHub pages
+        working_directory: ./dist
+        run: |
+          git init
+          git checkout -b main
+          git add -A
+          git commit -m 'deploy'
+          git push -f git@github.com:AndrewYHuang/love-jar.git main:gh-pages
