@@ -1,11 +1,12 @@
 image: alpine/edge
 packages:
   - nodejs
-  - pnpm
+  - npm
 sources:
   - https://git.sr.ht/~kaytwolf/love-jar
 tasks:
   - setup: |
+      npm i -g pnpm
       pnpm i
   - build: |
       pnpm build
