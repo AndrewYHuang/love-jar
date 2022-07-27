@@ -2,6 +2,7 @@ image: alpine/edge
 packages:
   - nodejs
   - npm
+  - hut
 sources:
   - https://git.sr.ht/~kaytwolf/love-jar
 secrets:
