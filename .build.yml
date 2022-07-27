@@ -20,4 +20,4 @@ tasks:
       cd love-jar/dist
       tar -cvz . > ../../love-jar.tar.gz
   - upload: |
-      hut pages publish -d kaytwolf.srht.site -s love-jar love-jar.tar.gz
+      hut pages publish -d love-jar.ayxh.dev love-jar.tar.gz
