@@ -6,6 +6,6 @@ sources:
   - https://git.sr.ht/~kaytwolf/love-jar
 tasks:
   - setup: |
-    pnpm i
+      pnpm i
   - build: |
-    pnpm build
+      pnpm build
