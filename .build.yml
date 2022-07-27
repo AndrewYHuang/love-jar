@@ -14,14 +14,8 @@ tasks:
   - build: |
       cd love-jar
       pnpm build
-      touch dist/.nojekyll
-  - deploy: |
+  - package: |
       cd love-jar/dist
-      git init
-      git checkout -b main
-      git add -A
-      git config --global user.email "builds@ayxh.dev"
-      git config --global user.name "Andrew Huang"
-      git commit -m "deploy"
-      git remote add origin git@github.com:AndrewYHuang/love-jar.git
-      git push --force -u origin main
+      tar -cvz . > ../../love-jar.tar.gz
+  - upload: |
+      hut pages publish -d kaytwolf.srht.site/love-jar love-jar.tar.gz
